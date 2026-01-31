@@ -23,7 +23,7 @@ export const pagesConfig: PagesConfig = {
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description: "Key skills where I am proficient.",
     metadata: {
       title: "Skills",
       description:

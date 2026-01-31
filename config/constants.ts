@@ -14,6 +14,7 @@ export type ValidSkills =
   | "SEO"
   | "SASS"
   | "Google Search Console"
+  | "WebSockets"
   | "Linux"
   | "React Native"
   | "Angular"

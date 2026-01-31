@@ -14,13 +14,28 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
-      <div className="relative w-full h-[200px] flex-shrink-0">
-        <Image
-          className="rounded-lg border border-border object-cover"
-          src={project.companyLogoImg}
-          alt="img"
-          fill
-        />
+      <div className="relative w-full overflow-hidden  cursor-pointer h-[200px] flex-shrink-0">
+        {project.websiteLink ? (
+          <Link href={`${project.websiteLink}`} target="_blank">
+            <Image
+              src={project.companyLogoImg}
+              alt={`${project.companyName} Logo`}
+              width={400}
+              height={400}
+              className="object-contain w-full h-full rounded-md hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+        ) : (
+          <Link href={`/projects/${project.id}`}>
+            <Image
+              src={project.companyLogoImg}
+              alt={`${project.companyName} Logo`}
+              width={400}
+              height={400}
+              className="object-contain w-full h-full rounded-md hover:scale-105 transition-transform duration-300"
+            />
+          </Link>
+        )}
       </div>
       <div className="pt-5 space-y-3 flex flex-col flex-grow">
         <h5 className="text-2xl font-bold tracking-tight text-foreground">
@@ -32,27 +47,33 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-2 flex-wrap">
           <ChipContainer textArr={project.category} />
         </div>
-        <Link href={`/projects/${project.id}`} className="mt-auto cursor-pointer">
-          <Button variant={"default"} className="mt-2 cursor-pointer w-full sm:w-auto">
+        <Link
+          href={`/projects/${project.id}`}
+          className="mt-auto cursor-pointer"
+        >
+          <Button
+            variant={"default"}
+            className="mt-2 cursor-pointer w-full sm:w-auto"
+          >
             Read more
             <Icons.chevronRight className="w-4 ml-1" />
           </Button>
         </Link>
       </div>
-      <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border hidden md:block">
-        {project.websiteLink && (
+      {project.websiteLink && (
+        <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border hidden md:block">
           <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
             <Link href={project.websiteLink} target="_blank">
               <Icons.externalLink className="w-6 text-muted-foreground hover:text-foreground " />
             </Link>
           </CustomTooltip>
-        )}
-        {/* {project.type === "Personal" ? (
+          {/* {project.type === "Personal" ? (
           <Icons.userFill className="h-4 w-4" />
         ) : (
           <Icons.work className="h-4 w-4" />
         )} */}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

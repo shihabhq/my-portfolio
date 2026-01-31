@@ -9,22 +9,18 @@ export const siteConfig = {
     twitter: "https://x.com/namanbarkiya",
     github: "https://github.com/shihabhq",
     linkedin: "https://linkedin.com/in/shihabhq",
-    threads: "https://threads.net",
+    x: "https://x.com/shihab_hq",
     email: "shihabhq@yahoo.com",
-    templateRepo: "https://github.com/namanbarkiya/minimal-next-portfolio",
   },
-  ogImage:
-    "https://res.cloudinary.com/dvt5vkfwz/image/upload/v1767384721/naman_portfolio_og_image.png",
-  iconIco:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  logoIcon:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+  ogImage: "https://ik.imagekit.io/bua2b1x6j/portfolio/og.webp",
+  iconIco: "https://ik.imagekit.io/bua2b1x6j/portfolio/logo.webp",
+  logoIcon: "https://ik.imagekit.io/bua2b1x6j/portfolio/logo.webp",
   keywords: [
     "Shihab Haque",
     "Software Engineer",
     "Full Stack Developer",
     "Machine Learning",
-    "Typescritp Developer",
+    "Typescript  Developer",
     "Python Developer",
     "React Developer",
     "Next.js Developer",

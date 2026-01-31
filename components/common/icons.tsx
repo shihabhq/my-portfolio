@@ -47,11 +47,13 @@ import {
   SiBootstrap,
   SiCss3,
   SiExpress,
+  SiGithub,
   SiGmail,
   SiGraphql,
   SiHtml5,
   SiJavascript,
   SiLinkedin,
+  SiLinux,
   SiMongodb,
   SiMui,
   SiMysql,
@@ -59,9 +61,12 @@ import {
   SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiRedux,
   SiSocketdotio,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
   SiX,
@@ -78,6 +83,8 @@ export const Icons = {
   chevronRight: ChevronRight,
   trash: Trash,
   post: FileText,
+  supabase: SiSupabase,
+  linux: SiLinux,
   page: File,
   media: Image,
   settings: Settings,
@@ -126,6 +133,9 @@ export const Icons = {
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
+  git: SiGithub,
+  prisma: SiPrisma,
+  postgresql: SiPostgresql,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
@@ -159,10 +169,10 @@ export const Icons = {
           className="tick"
           fill="none"
           stroke="currentColor"
-          stroke-width="4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-miterlimit="10"
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
           d="M14 27l5.917 4.917L34 17"
         />
       </svg>
