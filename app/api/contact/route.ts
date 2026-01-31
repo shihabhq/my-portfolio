@@ -1,30 +1,40 @@
+// app/api/contact/route.ts (Next.js App Router)
+import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const formLink = process.env.GOOGLE_FORM_LINK;
-  if (!formLink) {
-    return new NextResponse("Please configure the env variables", {
-      status: 500,
-    });
-  }
-
-  // configure this according to your google form
-  const fieldIdName = process.env.GOOGLE_FORM_FIELD_ID_NAME;
-  const fieldIdEmail = process.env.GOOGLE_FORM_FIELD_ID_EMAIL;
-  const fieldIdMessage = process.env.GOOGLE_FORM_FIELD_ID_MESSAGE;
-  const fieldIdSocial = process.env.GOOGLE_FORM_FIELD_ID_SOCIAL;
-
   try {
-    const body = await req.json();
-    const { name, message, social, email } = body;
+    const { name, email, message, social } = await req.json();
 
-    const res = await fetch(
-      `${formLink}/formResponse?${fieldIdName}=${name}&${fieldIdEmail}=${email}&${fieldIdMessage}=${message}&${fieldIdSocial}=${social}`
-    );
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
-    return NextResponse.json("Success!");
+    // Load service account credentials from env
+    const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON!);
+
+    const auth = new google.auth.GoogleAuth({
+      credentials: serviceAccount,
+      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    });
+
+    const sheets = google.sheets({ version: "v4", auth });
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID!,
+      range: "Sheet1!A:D", // adjust sheet name / columns if needed
+      valueInputOption: "RAW",
+      requestBody: {
+        values: [[name, email, message, social || ""]],
+      },
+    });
+
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.log(error);
-    return new NextResponse("Internal error", { status: 500 });
+    console.error("Error writing to Google Sheets:", error);
+    return new NextResponse("Internal server error", { status: 500 });
   }
 }

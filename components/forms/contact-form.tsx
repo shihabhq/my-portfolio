@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -19,20 +20,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { useModalStore } from "@/hooks/use-modal-store";
 
 const formSchema = z.object({
-  name: z.string().min(3, {
-    message: "Name must contain at least 3 characters.",
-  }),
+  name: z
+    .string()
+    .min(3, { message: "Name must contain at least 3 characters." }),
   email: z.string().email("Please enter a valid email."),
-  message: z.string().min(10, {
-    message: "Please write something more descriptive.",
-  }),
+  message: z
+    .string()
+    .min(10, { message: "Please write something more descriptive." }),
   social: z.string().url().optional().or(z.literal("")),
 });
 
 export function ContactForm() {
   const storeModal = useModalStore();
-
-  // const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,20 +44,18 @@ export function ContactForm() {
     },
   });
 
-  // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true); // start loading
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
 
       form.reset();
 
-      if (response.status === 200) {
+      if (response.ok) {
         storeModal.onOpen({
           title: "Thankyou!",
           description:
@@ -67,6 +65,8 @@ export function ContactForm() {
       }
     } catch (err) {
       console.log("Err!", err);
+    } finally {
+      setIsLoading(false); // stop loading
     }
   }
 
@@ -85,9 +85,6 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="Enter your name" {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -127,14 +124,18 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="Link for social account" {...field} />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+
+        {/* Submit Button with spinner */}
+        <Button type="submit" disabled={isLoading}>
+          {isLoading ? (
+            <Icons.spinner className="animate-spin w-5 h-5 mr-2 inline-block" />
+          ) : null}
+          {isLoading ? "Sending..." : "Submit"}
+        </Button>
       </form>
     </Form>
   );

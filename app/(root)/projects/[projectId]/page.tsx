@@ -10,7 +10,7 @@ import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
-import profileImg from "@/public/profile.jpg";
+import profileImg from "@/public/profile.webp";
 
 interface ProjectPageProps {
   params: Promise<{
@@ -89,14 +89,27 @@ export default async function Project({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      <Image
-        src={project.companyLogoImg}
-        alt={project.companyName}
-        width={720}
-        height={405}
-        className="my-8 rounded-md w-full border bg-muted transition-colors"
-        priority
-      />
+      {project.websiteLink ? (
+        <Link href={project.websiteLink} target="_blank">
+          <Image
+            src={project.companyLogoImg}
+            alt={project.companyName}
+            width={720}
+            height={405}
+            className="my-6 sm:my-8 cursor-pointer hover:scale-102 transition-all rounded-md w-full border bg-muted"
+            priority
+          />
+        </Link>
+      ) : (
+        <Image
+          src={project.companyLogoImg}
+          alt={project.companyName}
+          width={720}
+          height={405}
+          className="my-8 rounded-md w-full border bg-muted transition-colors"
+          priority
+        />
+      )}
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">

@@ -47,29 +47,29 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2024-07-01"),
     endDate: new Date("2026-01-31"),
-    companyLogoImg: "/projects/convot/main.png",
+    companyLogoImg: "/projects/convot/main.webp",
     pagesInfoArr: [
       {
         title: "Landing Page",
         description:
           "Designed a responsive and visually appealing landing page for the e-commerce platform.",
-        imgArr: ["/projects/convot/landing.png"],
+        imgArr: ["/projects/convot/landing.webp"],
       },
       {
         title: "Key Pages",
         description: "Product page, cart, checkout and authentication page",
         imgArr: [
-          "/projects/convot/individual.png",
-          "/projects/convot/cart.png",
-          "/projects/convot/checkout.png",
-          "/projects/convot/auth.png",
+          "/projects/convot/individual.webp",
+          "/projects/convot/cart.webp",
+          "/projects/convot/checkout.webp",
+          "/projects/convot/auth.webp",
         ],
       },
       {
         title: "Admin",
         description:
           "Complete admin panel for managing products, users, orders and payments.",
-        imgArr: ["/projects/convot/individual.png"],
+        imgArr: ["/projects/convot/individual.webp"],
       },
     ],
     descriptionDetails: {
@@ -103,24 +103,24 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/portfolio/innoverse.jpeg",
+    companyLogoImg: "/projects/portfolio/innoverse.webp",
     pagesInfoArr: [
       {
         title: "Frontend Design",
         description:
           "Clean and modern designed website that showcases the event details, competition details and key info in varous pages. It also handled registration, coupon system and payment system.",
         imgArr: [
-          "/projects/portfolio/innoverse.jpeg",
-          "/projects/portfolio/dynamic.png",
-          "/projects/portfolio/registration.png",
-          "/projects/portfolio/award.png",
+          "/projects/portfolio/innoverse.webp",
+          "/projects/portfolio/dynamic.webp",
+          "/projects/portfolio/registration.webp",
+          "/projects/portfolio/award.webp",
         ],
       },
       {
         title: "Full Stack Admin Panel",
         description:
           "Admin panel that managed and verified registrations, managed payment details and coupon system and hold the information of registered startups and projects.",
-        imgArr: ["/projects/portfolio/admin.png"],
+        imgArr: ["/projects/portfolio/admin.webp"],
       },
     ],
     descriptionDetails: {
@@ -134,6 +134,50 @@ export const Projects: ProjectInterface[] = [
         "Developed a registration system for startups, students, and STEM-based projects.",
         "Prepared a full-stack admin panel that managed 2500+ registrations, 200+ team registrations, and 60+ startup registrations.",
         "Implemented a real-time auction system for math contest using Node.js and websockets.",
+      ],
+    },
+  },
+  {
+    id: "generals-gambit",
+    companyName: "General's Gambit - Realtime Futsal Auction App",
+    type: "Professional",
+    category: ["Web Dev", "Frontend", "Backend"],
+    shortDescription:
+      "A futsal tournament player auction app where users can bit in real-time to acquire players for their teams.",
+    websiteLink: "https://youtu.be/0C4B22pQAiA?si=XBYcXkt8xvYzZNlA",
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "WebSockets",
+    ],
+    startDate: new Date("2022-03-01"),
+    endDate: new Date("2022-07-01"),
+    companyLogoImg: "/projects/gambit/futsal.webp",
+    pagesInfoArr: [
+      {
+        title: "Key Pages in Frontend",
+        description:
+          "The web app consists of several key pages including male auction, female auction, team list, players list and add player page.",
+        imgArr: [
+          "/projects/gambit/noor.webp",
+          "/projects/gambit/hero.webp",
+          "/projects/gambit/add.webp",
+          "/projects/gambit/teams.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This was one of my first public projects where I developed a real time auction system using WebSockets in Node.js backend and Next.js in frontend. The app was built for a univeristy futsal tournament where team captains could bid for players for their teams.",
+        "The app successfully handleld 100+ auctions with 11 team leaders bidding in real-time.",
+      ],
+      bullets: [
+        "Created image upload system for automatically add players",
+        "Enabled real-time auctions that were placed through Socket.io.",
+        "Prepared statistics pages of team details and player details",
       ],
     },
   },
@@ -154,26 +198,26 @@ export const Projects: ProjectInterface[] = [
     ],
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/card/hero.png",
+    companyLogoImg: "/projects/card/hero.webp",
     pagesInfoArr: [
       {
         title: "Key Pages in Frontend",
         description:
           "Website consists of several key pages including club events, landing page, members, alumni, about and dedicated job portal.",
         imgArr: [
-          "/projects/card/hero.png",
-          "/projects/card/about.png",
-          "/projects/card/alumni.png",
-          "/projects/card/jobs.png",
-          "/projects/card/affiliation.png",
-          "/projects/card/events.png",
+          "/projects/card/hero.webp",
+          "/projects/card/about.webp",
+          "/projects/card/alumni.webp",
+          "/projects/card/jobs.webp",
+          "/projects/card/affiliation.webp",
+          "/projects/card/events.webp",
         ],
       },
       {
         title: "Admin Panel",
         description:
           "A dedicated admin panel to manage members, event registrations and job postings.",
-        imgArr: ["/projects/card/admin.png"],
+        imgArr: ["/projects/card/admin.webp"],
       },
     ],
     descriptionDetails: {
@@ -186,6 +230,35 @@ export const Projects: ProjectInterface[] = [
         "Developed a registration system for a club event that managed to register 200+ registrations. An admin panel systematically handled the regsitration process.",
         "Implemented filtering system in various pages like members, alumni and in admin pages as well for better user experience.",
       ],
+    },
+  },
+  {
+    id: "jabo-kothay",
+    companyName: "Jabo Kothay Event Management App",
+    type: "Professional",
+    category: ["Mobile Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "Developed key features of an event management app Jabo Kothay that aims to revolutionize the event management industry in Bangladesh.",
+    techStack: ["React Native", "Typescript", "Tailwind CSS"],
+    startDate: new Date("2025-10-01"),
+    endDate: new Date("2026-01-31"),
+    companyLogoImg: "/projects/jabo-kothay/initial.webp",
+    pagesInfoArr: [
+      {
+        title: "Key Screens in Frontend",
+        description:
+          "Semeral Screens including event browsing, onboarding, authentication and profile management.",
+        imgArr: [
+          "/projects/jabo-kothay/initial.webp",
+          "/projects/jabo-kothay/secondary.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "The app targets a scattered event management industry in Bangladesh that lacks a proper seamless platform for event inclusion and management. The development is ongoing and yet to be launched in public.",
+      ],
+      bullets: [],
     },
   },
 ];

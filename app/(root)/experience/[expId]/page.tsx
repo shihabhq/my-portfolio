@@ -73,16 +73,16 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
               Role Summary
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {experience.description.map((desc, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-3"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 sm:mt-2 flex-shrink-0" />
                   {desc}
                 </li>
               ))}
@@ -97,16 +97,16 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
               Key Achievements
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {experience.achievements.map((achievement, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-3"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 sm:mt-2 flex-shrink-0" />
                   {achievement}
                 </li>
               ))}
@@ -121,11 +121,11 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">
               Technologies & Skills
             </h3>
             <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-muted-foreground">
               These are the primary technologies and skills utilized during my
               time at {experience.company}.
             </p>

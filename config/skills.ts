@@ -3,7 +3,7 @@ import { Icons } from "@/components/common/icons";
 export interface skillsInterface {
   name: string;
   description: string;
-  rating: number;
+
   icon: any;
 }
 
@@ -11,155 +11,113 @@ export const skillsUnsorted: skillsInterface[] = [
   {
     name: "Next.js",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
-    rating: 5,
+      "Wrote countless server-side rendered apps and static websites using the modern App Router.",
     icon: Icons.nextjs,
-  },
-  {
-    name: "React",
-    description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
-    rating: 5,
-    icon: Icons.react,
-  },
-  {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    rating: 4,
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
   },
   {
     name: "Node.js",
     description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
+      "Built scalable backend services on local and VPS environments using event-driven architecture.",
     icon: Icons.nodejs,
   },
   {
-    name: "MongoDB",
+    name: "React",
     description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
+      "Started with React in 2022 and since then built numerous applications in this ecosystem.",
+    icon: Icons.react,
+  },
+
+  {
+    name: "express.js",
+    description:
+      "Built web applications and APIs quickly using this fast Node.js framework.",
+    icon: Icons.express,
   },
   {
     name: "Typescript",
     description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
-    rating: 5,
+      "I use strong type checking in every project to catch errors early and improve code quality.",
     icon: Icons.typescript,
   },
   {
-    name: "Javascript",
+    name: "React Native",
     description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
-    rating: 5,
-    icon: Icons.javascript,
+      "Creating apps (Still learning) but successfully contributing to 2 large-scale projects.",
+    icon: Icons.react,
+  },
+  {
+    name: "PostgreSQL",
+    description:
+      "Most of my projects use this powerful and open-source relational database.",
+    icon: Icons.postgresql,
+  },
+  {
+    name: "Prisma",
+    description:
+      "My initial go-to ORM for database management and interactions is Prisma.",
+    icon: Icons.prisma,
+  },
+  {
+    name: "Redux & Zustand",
+    description:
+      "I comfortably manage state in React applications using these two libraries.",
+    icon: Icons.redux,
   },
   {
     name: "HTML 5",
     description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
+      "Initial starting point in my development journey to create websites.",
     icon: Icons.html5,
   },
   {
     name: "CSS 3",
     description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
+      "CSS stlyling the webpage made me more passionate in development and designs.",
     icon: Icons.css3,
   },
   {
-    name: "React Native",
+    name: "Tailwind CSS",
     description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
+      "My go-to design utility-first CSS framework to build responsive and cool websites.",
+    icon: Icons.tailwindcss,
   },
   {
-    name: "Angular",
+    name: "Javascript",
     description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
-    rating: 3,
-    icon: Icons.angular,
+      "First programming language I learned that enhanced my understanding and analytical ability.",
+    icon: Icons.javascript,
   },
   {
-    name: "Redux",
+    name: "MongoDB",
     description:
-      "Manage app state effectively using a predictable and centralized state container.",
-    rating: 4,
-    icon: Icons.redux,
+      "I use MongoDB for flexible document-based data storage in my projects.",
+    icon: Icons.mongodb,
   },
   {
     name: "Socket.io",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
-    rating: 3,
+      "I enabled real-time bidirectional communication between machines using this library.",
     icon: Icons.socketio,
   },
   {
-    name: "Material UI",
+    name: "Supabase",
     description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    rating: 4,
-    icon: Icons.mui,
-  },
-
-  {
-    name: "Tailwind CSS",
-    description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    rating: 5,
-    icon: Icons.tailwindcss,
+      "For implementing BaaS in projects my first target is always Supabase.",
+    icon: Icons.supabase,
   },
   {
-    name: "AWS",
-    description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
-    rating: 3,
-    icon: Icons.amazonaws,
+    name: "Git and GitHub",
+    description: "I hosted more than hundred projects on GitHub. I push code almost daily.",
+    icon: Icons.git,
   },
   {
-    name: "Bootstrap",
+    name: "Linux Server",
     description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
-  },
-  {
-    name: "MySQL",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
-  },
-  {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
+      "I have been using linux for more than two years and I am fully comfortable in linux servers.",
+    icon: Icons.linux,
   },
 ];
 
-export const skills = skillsUnsorted
-  .slice()
-  .sort((a, b) => b.rating - a.rating);
+export const skills = skillsUnsorted.slice();
 
 export const featuredSkills = skills.slice(0, 6);

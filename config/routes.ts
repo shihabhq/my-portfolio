@@ -12,9 +12,5 @@ export const routesConfig: any = {
       title: "Skills",
       href: "/skills",
     },
-    {
-      title: "Contact",
-      href: "/contact",
-    },
   ],
 };
