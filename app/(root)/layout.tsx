@@ -28,7 +28,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
           </nav>
         </div>
       </header>
-      <main className="container flex-1 mx-auto px-4">{children}</main>
+      <main className="container flex-1 mx-auto mt-16 px-4">{children}</main>
       <SiteFooter />
     </div>
   );
