@@ -71,8 +71,8 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:py-12 my-28 md:my-0 md:h-screen flex items-center">
-        <div className="container flex max-w-[64rem] mx-auto flex-col items-center gap-2 sm:gap-4 text-center -mt-20">
+      <section className="space-y-6 pb-8 mb-0 md:py-10 md:my-14 md:h-fit flex items-center">
+        <div className="container flex max-w-[64rem] mx-auto flex-col items-center gap-2 sm:gap-4 text-center -mt-8 md:-mt-20">
           <Image
             src={profileImg}
             height={100}
@@ -149,7 +149,7 @@ export default function IndexPage() {
       </section>
       <AnimatedSection
         direction="up"
-        className="container space-y-6 py-10"
+        className="container space-y-6 py-10 my-14"
         id="projects"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
