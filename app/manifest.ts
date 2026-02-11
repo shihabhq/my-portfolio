@@ -12,12 +12,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#000000",
     icons: [
       {
-        src: "/favicon.ico",
+        src: "https://ik.imagekit.io/bua2b1x6j/portfolio/logo.webp",
         sizes: "64x64",
         type: "image/png",
       },
       {
-        src: "/favicon.ico",
+        src: "https://ik.imagekit.io/bua2b1x6j/portfolio/logo.webp",
         sizes: "64x64",
         type: "image/png",
         purpose: "maskable",

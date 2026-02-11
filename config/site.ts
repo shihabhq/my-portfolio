@@ -4,9 +4,9 @@ export const siteConfig = {
   username: "shihabhq",
   description:
     "Shihab Haque - Full-Stack Web & App Developer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
-  url: "https://shihabhaque.xyz",
+  url: "https://shihab.live",
   links: {
-    twitter: "https://x.com/namanbarkiya",
+    twitter: "https://x.com/shihab_hq",
     github: "https://github.com/shihabhq",
     linkedin: "https://linkedin.com/in/shihabhq",
     x: "https://x.com/shihab_hq",

@@ -21,7 +21,7 @@ import profileImg from "@/public/profile.webp";
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
   description:
-    "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
+    "Shihab Haque - Full-Stack Web & App Developer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -35,7 +35,7 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Applied AI Engineer",
+    jobTitle: "Full-Stack Web & App Developer",
     sameAs: [siteConfig.links.github, siteConfig.links.twitter],
   };
 
@@ -43,7 +43,7 @@ export default function IndexPage() {
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Next.js Portfolio Template",
+    name: "Shihab Haque - Full-Stack Web & App Developer",
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Web",
     offers: {
@@ -79,7 +79,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[80%] max-w-[20rem] border-4 border-primary"
-            alt="Naman Barkiya - Applied AI Engineer Portfolio"
+            alt="Shihab Haque - Full-Stack Web & App Developer"
             priority
           />
           <AnimatedText
