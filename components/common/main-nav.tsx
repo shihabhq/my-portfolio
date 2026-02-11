@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
@@ -15,13 +14,6 @@ interface MainNavProps {
   items?: any[];
   children?: React.ReactNode;
 }
-
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 // Animation variants for the navigation items
 const navItemVariants = {
@@ -39,8 +31,10 @@ const navItemVariants = {
 
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
+  const params = usePathname();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
+  console.log(items);
 
   React.useEffect(() => {
     setShowMobileMenu(false);
@@ -55,7 +49,8 @@ export function MainNav({ items, children }: MainNavProps) {
       >
         <Link href="/" className="hidden items-center space-x-2 md:flex">
           <span className="text-2xl font-semibold">
-            {siteConfig.authorName}<span className="text-cyan-500 text-2xl " >.</span>
+            {siteConfig.authorName}
+            <span className="text-cyan-500 text-2xl ">.</span>
           </span>
         </Link>
       </motion.div>
@@ -75,7 +70,7 @@ export function MainNav({ items, children }: MainNavProps) {
                 href={item.disabled ? "#" : item.href}
                 className={cn(
                   "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-                  item.href.startsWith(`/${segment}`)
+                  item.href === pathname
                     ? "text-foreground"
                     : "text-foreground/60",
                   item.disabled && "cursor-not-allowed opacity-80"
