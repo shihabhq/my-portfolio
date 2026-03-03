@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Icons } from "@/components/common/icons";
+import PageImagesLightbox from "@/components/projects/page-images-lightbox";
 import ProjectDescription from "@/components/projects/project-description";
 import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
@@ -18,7 +19,6 @@ interface ProjectPageProps {
   }>;
 }
 
-const githubUsername = "shihabhq";
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
@@ -139,26 +139,7 @@ export default async function Project({ params }: ProjectPageProps) {
               <Icons.star className="h-5 w-5 mr-2" /> {page.title}
             </h3>
             <p className="text-muted-foreground">{page.description}</p>
-            <div
-              className={cn(
-                "mt-4 gap-4",
-                page.imgArr.length > 1
-                  ? "grid grid-cols-1 sm:grid-cols-2"
-                  : "grid grid-cols-1"
-              )}
-            >
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  key={ind}
-                  src={img}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="w-full rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
-            </div>
+            <PageImagesLightbox images={page.imgArr} />
           </div>
         ))}
       </div>

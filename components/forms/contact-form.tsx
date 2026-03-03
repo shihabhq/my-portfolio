@@ -64,7 +64,7 @@ export function ContactForm() {
         });
       }
     } catch (err) {
-      console.log("Err!", err);
+      console.error(err);
     } finally {
       setIsLoading(false); // stop loading
     }

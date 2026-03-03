@@ -21,7 +21,7 @@ import profileImg from "@/public/profile.webp";
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
   description:
-    "Shihab Haque - Full-Stack Web & App Developer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
+    "Shihab Haque - Full-Stack Web & Mobile Application Developer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -85,7 +85,7 @@ export default function IndexPage() {
           <AnimatedText
             as="h1"
             delay={0.2}
-            className="font-heading mt-2 sm:mt-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading font-semibold mt-2 sm:mt-0 text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Shihab Haque
           </AnimatedText>
@@ -94,7 +94,7 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Web & App Developer
+            Developer | Creative Coder
           </AnimatedText>
           <div className=" max-w-[42rem] text-center">
             <p className="leading-normal max-w-[80%] mx-auto text-muted-foreground text-sm sm:text-lg sm:text-base">
