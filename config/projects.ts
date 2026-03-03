@@ -138,6 +138,62 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
+    id: "votekori",
+    companyName: "Vote Kori - Election Knowledge Civic Tech Project",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "UI/UX"],
+    shortDescription:
+      "A Civic Tech project to increase voting knowledge in gamified way. Created in collaboration with Civicus, Accountability Lab and Kashful Foundation.",
+    websiteLink: "https://votekori.cloud",
+    githubLink: "https://github.com/shihabhq/democracy-client",
+    techStack: [
+      "Next.js",
+      "Node.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "SEO",
+      "PostgreSQL",
+      "Linux",
+    ],
+    startDate: new Date("2026-02-01"),
+    endDate: new Date("2026-02-08"),
+    companyLogoImg: "/projects/votekori/votekori.webp",
+    pagesInfoArr: [
+      {
+        title: "Frontend Design",
+        description:
+          "Designed and Developed the frontend of the application that showcases the quiz details, quiz take and certificate generation",
+        imgArr: [
+          "/projects/votekori/votekori.webp",
+          "/projects/votekori/quiz.webp",
+          "/projects/votekori/quiz-take.webp",
+          "/projects/votekori/certificate.webp",
+        ],
+      },
+      {
+        title: "Full Stack Admin Panel",
+        description:
+          "Created a admin panel that shows analytics and manages the quiz questions and answers.",
+        imgArr: [
+          "/projects/votekori/admin.webp",
+          "/projects/votekori/add-question.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Vote Kori is a civic tech project that gamifies the approach of users getting to know about the basic election knowledge in a fun and engaging way. This project was created prior to the 13th natonal election in Bangladesh to increase the voting knowledge of the citizens. The project was implemented under the DDI South Asia initiative Along with Civicus, Accountabilitylab and Kashful Foundation.",
+        "The application requires a user to play a small quiz of random 20 questions. If a minimum of 10 out of 20 answers are correct then the user will receive a certificate of 'Ready to Vote' label. The certificate is a downloadable PDF file.",
+      ],
+      bullets: [
+        "Created the quiz system from scratch using Next.js, Node.js, PostgreSQL and Tailwind CSS.",
+        "Prepared certificate generation system using Nodejs and supabase storage.",
+        "Hosted the backend successfully on a VPS server to handle the traffic and requests. Implemented CI/CD pipeline to automate the deployement.",
+      ],
+    },
+  },
+  {
     id: "generals-gambit",
     companyName: "General's Gambit - Realtime Futsal Auction App",
     type: "Professional",
@@ -181,6 +237,7 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+
   {
     id: "bupcareerclub",
     companyName: "BUP Career Club Website",

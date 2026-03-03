@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Shihab Haque | Full-Stack Web & App Developer",
+    name: "Shihab Haque | Full-Stack Web & Mobile Application Developer",
     short_name: "Shihab Haque",
     description:
-      "Shihab Haque - Full-Stack Web & App Developer working at the intersection of AI, data, and scalable software systems.",
+      "Shihab Haque - Full-Stack Web & Mobile Application Developer working at the intersection of AI, data, and scalable software systems.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

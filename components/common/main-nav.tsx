@@ -30,11 +30,8 @@ const navItemVariants = {
 };
 
 export function MainNav({ items, children }: MainNavProps) {
-  const segment = useSelectedLayoutSegment();
-  const params = usePathname();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
-  console.log(items);
 
   React.useEffect(() => {
     setShowMobileMenu(false);
