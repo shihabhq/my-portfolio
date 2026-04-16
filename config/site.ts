@@ -31,5 +31,11 @@ export const siteConfig = {
     "Web Developer",
     "Backend Developer",
     "Frontend Developer",
+    "BUET",
+    "ICT Ministry Bangladesh",
+    "AFK Tech",
+    "Whiteboard Initiatives",
+    "Kashful Foundation",
+    "Bangladesh Developer",
   ],
 };

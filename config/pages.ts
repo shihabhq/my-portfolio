@@ -72,4 +72,13 @@ export const pagesConfig: PagesConfig = {
         "Shihab Haque's professional journey and experience timeline.",
     },
   },
+  clients: {
+    title: "Clients & Organizations",
+    description: "Organizations and institutions I have worked and collaborated with.",
+    metadata: {
+      title: "Clients & Organizations",
+      description:
+        "Organizations and institutions Shihab Haque has worked and collaborated with.",
+    },
+  },
 };
