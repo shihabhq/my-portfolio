@@ -8,7 +8,7 @@ export type Client = {
 export const clients: Client[] = [
   {
     id: "ict-ministry",
-    name: "ICT Ministry",
+    name: "Ministry of ICT",
     logo: "/clients/ict-ministry.png",
     website: "https://ictd.gov.bd",
   },
@@ -26,7 +26,7 @@ export const clients: Client[] = [
   },
   {
     id: "afk-tech",
-    name: "AFK Tech",
+    name: "AFK Tech Limited",
     logo: "/clients/afk-tech.png",
     website: "https://www.afktechltd.com/",
   },
