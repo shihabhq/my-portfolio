@@ -46,7 +46,7 @@ export const clients: Client[] = [
     id: "seenjoy-academy",
     name: "Seenjoy Academy",
     logo: "/clients/seenjoy-academy.png",
-    // website: "", // Add Seenjoy Academy's website URL here
+    website: "https://seenjoy.academy/",
   },
   {
     id: "whiteboard-initiatives",

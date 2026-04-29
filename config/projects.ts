@@ -138,6 +138,70 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
+  id: "seenjoy",
+  companyName: "Seenjoy - Live Course Sales Platform",
+  websiteLink: "https://seenjoy.academy",
+  type: "Professional",
+  category: ["Full Stack", "Frontend", "UI/UX"],
+  shortDescription:
+    "Production-ready course registration platform for a content creator with SSLCommerz payment integration, dynamic campaign pricing, coupon management, and a full admin dashboard for a live public speaking masterclass.",
+  techStack: [
+    "Next.js",
+    "React",
+    "Typescript",
+    "Prisma",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Supabase",
+    "Framer Motion",
+  ],
+  startDate: new Date("2026-04-01"),
+  endDate: new Date("2026-04-28"),
+  companyLogoImg: "/projects/seenjoy/landing.webp",
+  pagesInfoArr: [
+    {
+      title: "Landing Page",
+      description:
+        "Fully Bengali-language landing page with animated sections covering course curriculum, mentor bio, learning outcomes, FAQs, and a mobile floating action bar for quick checkout access.",
+      imgArr: ["/projects/seenjoy/landing.webp",
+        "/projects/seenjoy/learning.webp",
+        "/projects/seenjoy/structure.webp",
+        "/projects/seenjoy/faq.webp",
+      ],
+    },
+    {
+      title: "Checkout & Order Flow",
+      description:
+        "Multi-step checkout with real-time coupon validation, campaign pricing display, SSLCommerz payment initiation, and a post-payment success confirmation page.",
+      imgArr: [
+        "/projects/seenjoy/checkout.webp",
+        "/projects/seenjoy/success.webp",
+      ],
+    },
+    {
+      title: "Admin Dashboard",
+      description:
+        "Authenticated admin panel with revenue analytics, full registrations table, and coupon CRUD management secured via Supabase Auth.",
+      imgArr: [
+        "/projects/seenjoy/admin.webp",
+        "/projects/seenjoy/coupon.webp",
+      ],
+    },
+  ],
+  descriptionDetails: {
+    paragraphs: [
+      "Seenjoy is a production-ready course sales platform built from scratch for a Bengali content creator's live public speaking masterclass. The platform is a 2-app monorepo — a student-facing storefront and a separate admin dashboard — both sharing a single PostgreSQL database via Prisma.",
+      "The entire interface is in Bengali, with SSLCommerz (Bangladesh's leading payment gateway) handling transactions. The platform manages the full order lifecycle from registration to payment confirmation, including automated email receipts and duplicate enrollment prevention.",
+    ],
+    bullets: [
+      "Built a dynamic campaign pricing engine that automatically switches between early bird (৳880) and regular (৳1500) pricing based on date, with a live countdown timer on the storefront.",
+      "Implemented a flexible coupon system supporting both percentage and fixed-amount discounts with per-coupon usage limits and real-time validation at checkout.",
+      "Integrated Google Analytics (GA4) and Meta Pixel event tracking alongside full OpenGraph and Twitter card metadata for marketing and SEO.",
+      "Secured the admin panel with Supabase Auth, providing real-time order stats (total, paid, pending, failed, cancelled revenue) and full registration management.",
+    ],
+  },
+},
+  {
     id: "votekori",
     companyName: "Vote Kori - Election Knowledge Civic Tech Project",
     type: "Professional",
