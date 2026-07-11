@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(ls -la \"app/\\(root\\)/\")",
-      "WebSearch"
+      "WebSearch",
+      "Read(//e/Code V2/grinscreen/**)",
+      "Read(//e/Code V2/**)",
+      "Read(//e/Code/**)",
+      "Read(//c/e/**)",
+      "Bash(find /e -maxdepth 3 -name grinscreen -type d)",
+      "Bash(cmd.exe /c \"dir E:\\\\Code\\\\ V2\\\\grinscreen\")",
+      "Bash(cmd.exe /c \"dir /b \\\\\"E:\\\\\\\\Code V2\\\\\\\\grinscreen\\\\\"\" 2>&1)",
+      "Bash(cmd.exe /c \"dir \\\\\"E:\\\\\\\\Code V2\\\\\"\" 2>&1)",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2'\" 2>&1)",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\griscreen'\" 2>&1)",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\griscreen\\\\public' -Recurse\" 2>&1)",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\grinscreen'\" 2>&1)",
+      "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\projects\\\\grinscreen'\" 2>&1)",
+      "Bash(powershell.exe -Command \"Remove-Item -Recurse -Force 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\grinscreen'; Write-Host 'Done'\" 2>&1)"
     ]
   }
 }

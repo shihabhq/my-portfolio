@@ -29,6 +29,187 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
+    id: "innoverse",
+    companyName: "Innoverse BD - Largest Science Carnival of Bangladesh",
+    type: "Professional",
+    category: ["Web Dev", "Frontend", "UI/UX"],
+    shortDescription:
+      "The web presense of The largest Science Carnival of Bangladesh organized Jointly by ICT Ministry of Bangladesh and Whiteboard Initiatives.",
+    websiteLink: "https://innoversebd.net",
+    githubLink: "https://github.com/shihabhq/innoverse",
+    techStack: [
+      "Next.js",
+      "Node.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    startDate: new Date("2025-09-01"),
+    endDate: new Date("2025-12-01"),
+    companyLogoImg: "/projects/portfolio/innoverse.webp",
+    pagesInfoArr: [
+      {
+        title: "Frontend Design",
+        description:
+          "Clean and modern designed website that showcases the event details, competition details and key info in varous pages. It also handled registration, coupon system and payment system.",
+        imgArr: [
+          "/projects/portfolio/innoverse.webp",
+          "/projects/portfolio/dynamic.webp",
+          "/projects/portfolio/registration.webp",
+          "/projects/portfolio/award.webp",
+        ],
+      },
+      {
+        title: "Full Stack Admin Panel",
+        description:
+          "Admin panel that managed and verified registrations, managed payment details and coupon system and hold the information of registered startups and projects.",
+        imgArr: ["/projects/portfolio/admin.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This is the web presense of the largest science carnival in Bangladesh jointly organized by Whiteboard Initiatives and the Ministry of ICT, Bangladesh Government.",
+        "I was the key developer who prepared the entire frontend system and admin panel that forecasted the event details, managed registrations and payment details. I also prepared an unprecedented auction system for math contest using Node.js websockets.",
+        "This website was the key part of being the event to be a success.",
+      ],
+      bullets: [
+        "Built the whole online web presence of an event that accommodated 20000+ members.",
+        "Developed a registration system for startups, students, and STEM-based projects.",
+        "Prepared a full-stack admin panel that managed 2500+ registrations, 200+ team registrations, and 60+ startup registrations.",
+        "Implemented a real-time auction system for math contest using Node.js and websockets.",
+      ],
+    },
+  },
+  {
+    id: "seenjoy",
+    companyName: "Seenjoy - Live Course Sales Platform",
+    websiteLink: "https://seenjoy.academy",
+    type: "Professional",
+    category: ["Full Stack", "Frontend", "UI/UX"],
+    shortDescription:
+      "Production-ready course registration platform for a content creator with SSLCommerz payment integration, dynamic campaign pricing, coupon management, and a full admin dashboard for a live public speaking masterclass.",
+    techStack: [
+      "Next.js",
+      "React",
+      "Typescript",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Supabase",
+      "Framer Motion",
+    ],
+    startDate: new Date("2026-04-01"),
+    endDate: new Date("2026-04-28"),
+    companyLogoImg: "/projects/seenjoy/landing.webp",
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        description:
+          "Fully Bengali-language landing page with animated sections covering course curriculum, mentor bio, learning outcomes, FAQs, and a mobile floating action bar for quick checkout access.",
+        imgArr: [
+          "/projects/seenjoy/landing.webp",
+          "/projects/seenjoy/learning.webp",
+          "/projects/seenjoy/structure.webp",
+          "/projects/seenjoy/faq.webp",
+        ],
+      },
+      {
+        title: "Checkout & Order Flow",
+        description:
+          "Multi-step checkout with real-time coupon validation, campaign pricing display, SSLCommerz payment initiation, and a post-payment success confirmation page.",
+        imgArr: [
+          "/projects/seenjoy/checkout.webp",
+          "/projects/seenjoy/success.webp",
+        ],
+      },
+      {
+        title: "Admin Dashboard",
+        description:
+          "Authenticated admin panel with revenue analytics, full registrations table, and coupon CRUD management secured via Supabase Auth.",
+        imgArr: [
+          "/projects/seenjoy/admin.webp",
+          "/projects/seenjoy/coupon.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Seenjoy is a production-ready course sales platform built from scratch for a Bengali content creator's live public speaking masterclass. The platform is a 2-app monorepo a student-facing storefront and a separate admin dashboard both sharing a single PostgreSQL database via Prisma.",
+        "The entire interface is in Bengali, with SSLCommerz (Bangladesh's leading payment gateway) handling transactions. The platform manages the full order lifecycle from registration to payment confirmation, including automated email receipts and duplicate enrollment prevention.",
+      ],
+      bullets: [
+        "Built a dynamic campaign pricing engine that automatically switches between early bird (৳880) and regular (৳1500) pricing based on date, with a live countdown timer on the storefront.",
+        "Implemented a flexible coupon system supporting both percentage and fixed-amount discounts with per-coupon usage limits and real-time validation at checkout.",
+        "Integrated Google Analytics (GA4) and Meta Pixel event tracking alongside full OpenGraph and Twitter card metadata for marketing and SEO.",
+        "Secured the admin panel with Supabase Auth, providing real-time order stats (total, paid, pending, failed, cancelled revenue) and full registration management.",
+      ],
+    },
+  },
+
+  {
+    id: "grinscreen",
+    companyName: "Grinscreen Digital Marketing Agency Website",
+    websiteLink: "https://grinscreen.com",
+    githubLink: "https://github.com/shihabhq/grinscreen",
+    type: "Professional",
+    category: ["Frontend", "UI/UX", "Web Dev"],
+    shortDescription:
+      "Dark, media-forward website for Grinscreen Digital, a 360° marketing agency known for viral reels and serving 29+ brands including Pathao. Built with animated scroll reveals, lazy-loaded video reels, and a static design showcase.",
+    techStack: [
+      "Next.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+    startDate: new Date("2026-06-28"),
+    endDate: new Date("2026-07-11"),
+    companyLogoImg: "/projects/grinscreen/home-landing.webp",
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        description:
+          "Full-bleed, scroll-driven hero with the brand's signature near-black palette and glowing green accents. Smooth Lenis scroll, motion-revealed sections, and a live client marquee of 29+ brands.",
+        imgArr: [
+          "/projects/grinscreen/home-landing.webp",
+          "/projects/grinscreen/home-landing-2.webp",
+        ],
+      },
+      {
+        title: "Services & Reel Showcase",
+        description:
+          "Services section detailing the agency's 6 core offerings, and a lazy-loaded reel showcase with 15 videos delivered with zero upfront bandwidth cost.",
+        imgArr: [
+          "/projects/grinscreen/services.webp",
+          "/projects/grinscreen/reels.webp",
+        ],
+      },
+      {
+        title: "Portfolio & Contact",
+        description:
+          "Portfolio page showcasing static social creatives and brand photography for F&B and lifestyle clients, plus a contact page.",
+        imgArr: [
+          "/projects/grinscreen/portfolio-page.webp",
+          "/projects/grinscreen/contact.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Grinscreen Digital is a 360° digital marketing agency based in Bangladesh, known for producing viral short-form reels and serving 29+ brands including Pathao and major Dhaka F&B/lifestyle labels.",
+        "I built their entire website from scratch a dark, premium, media-forward experience using Next.js App Router, Tailwind CSS v4, and Framer Motion. The site features smooth Lenis scroll, scroll-triggered animations, a lazy-loaded reel showcase with 15 videos, an Embla carousel for static designs, and a client logo marquee.",
+      ],
+      bullets: [
+        "Implemented a bandwidth-first video strategy: 15 reels (~94 MB) are lazy-mounted and play only when in view, with preload='none' and poster fallbacks zero unnecessary downloads.",
+        "Built with Next.js 16 App Router and Tailwind CSS v4 (CSS-first config via @theme) fully static-exportable and deployed on Vercel.",
+        "Animated every section with Framer Motion scroll reveals and smooth Lenis scroll for a premium creative-studio feel.",
+        "Showcases 6 core services: Reel Making, Static Design, Social Media Campaigns, Ad Services, Photoshoots, and 360° Brand Support.",
+      ],
+    },
+  },
+  {
     id: "gadget-city-bd",
     companyName: "Gadget City BD Electronics E-Commerce",
     websiteLink: "https://gadgetcitybd.com",
@@ -84,123 +265,6 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
-  {
-    id: "innoverse",
-    companyName: "Innoverse BD - Largest Science Carnival of Bangladesh",
-    type: "Professional",
-    category: ["Web Dev", "Frontend", "UI/UX"],
-    shortDescription:
-      "The web presense of The largest Science Carnival of Bangladesh organized Jointly by ICT Ministry of Bangladesh and Whiteboard Initiatives.",
-    websiteLink: "https://innoversebd.net",
-    githubLink: "https://github.com/shihabhq/innoverse",
-    techStack: [
-      "Next.js",
-      "Node.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS",
-      "Vercel",
-    ],
-    startDate: new Date("2025-09-01"),
-    endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/portfolio/innoverse.webp",
-    pagesInfoArr: [
-      {
-        title: "Frontend Design",
-        description:
-          "Clean and modern designed website that showcases the event details, competition details and key info in varous pages. It also handled registration, coupon system and payment system.",
-        imgArr: [
-          "/projects/portfolio/innoverse.webp",
-          "/projects/portfolio/dynamic.webp",
-          "/projects/portfolio/registration.webp",
-          "/projects/portfolio/award.webp",
-        ],
-      },
-      {
-        title: "Full Stack Admin Panel",
-        description:
-          "Admin panel that managed and verified registrations, managed payment details and coupon system and hold the information of registered startups and projects.",
-        imgArr: ["/projects/portfolio/admin.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "This is the web presense of the largest science carnival in Bangladesh jointly organized by Whiteboard Initiatives and the Ministry of ICT, Bangladesh Government.",
-        "I was the key developer who prepared the entire frontend system and admin panel that forecasted the event details, managed registrations and payment details. I also prepared an unprecedented auction system for math contest using Node.js websockets.",
-        "This website was the key part of being the event to be a success.",
-      ],
-      bullets: [
-        "Built the whole online web presence of an event that accommodated 20000+ members.",
-        "Developed a registration system for startups, students, and STEM-based projects.",
-        "Prepared a full-stack admin panel that managed 2500+ registrations, 200+ team registrations, and 60+ startup registrations.",
-        "Implemented a real-time auction system for math contest using Node.js and websockets.",
-      ],
-    },
-  },
-  {
-  id: "seenjoy",
-  companyName: "Seenjoy - Live Course Sales Platform",
-  websiteLink: "https://seenjoy.academy",
-  type: "Professional",
-  category: ["Full Stack", "Frontend", "UI/UX"],
-  shortDescription:
-    "Production-ready course registration platform for a content creator with SSLCommerz payment integration, dynamic campaign pricing, coupon management, and a full admin dashboard for a live public speaking masterclass.",
-  techStack: [
-    "Next.js",
-    "React",
-    "Typescript",
-    "Prisma",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Supabase",
-    "Framer Motion",
-  ],
-  startDate: new Date("2026-04-01"),
-  endDate: new Date("2026-04-28"),
-  companyLogoImg: "/projects/seenjoy/landing.webp",
-  pagesInfoArr: [
-    {
-      title: "Landing Page",
-      description:
-        "Fully Bengali-language landing page with animated sections covering course curriculum, mentor bio, learning outcomes, FAQs, and a mobile floating action bar for quick checkout access.",
-      imgArr: ["/projects/seenjoy/landing.webp",
-        "/projects/seenjoy/learning.webp",
-        "/projects/seenjoy/structure.webp",
-        "/projects/seenjoy/faq.webp",
-      ],
-    },
-    {
-      title: "Checkout & Order Flow",
-      description:
-        "Multi-step checkout with real-time coupon validation, campaign pricing display, SSLCommerz payment initiation, and a post-payment success confirmation page.",
-      imgArr: [
-        "/projects/seenjoy/checkout.webp",
-        "/projects/seenjoy/success.webp",
-      ],
-    },
-    {
-      title: "Admin Dashboard",
-      description:
-        "Authenticated admin panel with revenue analytics, full registrations table, and coupon CRUD management secured via Supabase Auth.",
-      imgArr: [
-        "/projects/seenjoy/admin.webp",
-        "/projects/seenjoy/coupon.webp",
-      ],
-    },
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Seenjoy is a production-ready course sales platform built from scratch for a Bengali content creator's live public speaking masterclass. The platform is a 2-app monorepo — a student-facing storefront and a separate admin dashboard — both sharing a single PostgreSQL database via Prisma.",
-      "The entire interface is in Bengali, with SSLCommerz (Bangladesh's leading payment gateway) handling transactions. The platform manages the full order lifecycle from registration to payment confirmation, including automated email receipts and duplicate enrollment prevention.",
-    ],
-    bullets: [
-      "Built a dynamic campaign pricing engine that automatically switches between early bird (৳880) and regular (৳1500) pricing based on date, with a live countdown timer on the storefront.",
-      "Implemented a flexible coupon system supporting both percentage and fixed-amount discounts with per-coupon usage limits and real-time validation at checkout.",
-      "Integrated Google Analytics (GA4) and Meta Pixel event tracking alongside full OpenGraph and Twitter card metadata for marketing and SEO.",
-      "Secured the admin panel with Supabase Auth, providing real-time order stats (total, paid, pending, failed, cancelled revenue) and full registration management.",
-    ],
-  },
-},
   {
     id: "votekori",
     companyName: "Vote Kori - Election Knowledge Civic Tech Project",

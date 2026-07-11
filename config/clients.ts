@@ -54,4 +54,16 @@ export const clients: Client[] = [
     logo: "/clients/whiteboard-initiatives.png",
     website: "https://wbinitiatives.org/",
   },
+  {
+    id: "grinscreen-digital",
+    name: "Grinscreen Digital",
+    logo: "/clients/grinscreen.png",
+    website: "https://grinscreen.com/",
+  },
+  {
+    id: "corpomerch",
+    name: "Corpomerch",
+    logo: "/clients/corpomerch.png",
+    website: "https://corpomerch.com/",
+  },
 ];

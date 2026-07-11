@@ -50,7 +50,7 @@ function ClientCard({ client }: { client: Client }) {
 
 export default function ClientsLogoGrid({ clients }: ClientsLogoGridProps) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 w-full">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 w-full">
       {clients.map((client, index) => (
         <AnimatedSection
           key={client.id}

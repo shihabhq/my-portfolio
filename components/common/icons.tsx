@@ -70,6 +70,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiX,
+  SiDocker,
+  SiPython,
 } from "react-icons/si";
 
 export const Icons = {
@@ -136,6 +138,8 @@ export const Icons = {
   git: SiGithub,
   prisma: SiPrisma,
   postgresql: SiPostgresql,
+  docker: SiDocker,
+  python: SiPython,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

@@ -40,6 +40,12 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.typescript,
   },
   {
+    name: "Python",
+    description:
+      "I use Python for scripting, automation, and data processing tasks across various projects.",
+    icon: Icons.python,
+  },
+  {
     name: "React Native",
     description:
       "Creating apps (Still learning) but successfully contributing to 2 large-scale projects.",
@@ -107,8 +113,15 @@ export const skillsUnsorted: skillsInterface[] = [
   },
   {
     name: "Git and GitHub",
-    description: "I hosted more than hundred projects on GitHub. I push code almost daily.",
+    description:
+      "I hosted more than hundred projects on GitHub. I push code almost daily.",
     icon: Icons.git,
+  },
+  {
+    name: "Docker",
+    description:
+      "I use Docker to containerize applications and ensure consistent environments across development and production.",
+    icon: Icons.docker,
   },
   {
     name: "Linux Server",
