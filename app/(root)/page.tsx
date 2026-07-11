@@ -96,7 +96,7 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Developer | Project Lead | Creative Coder
+            AI Driven Web & Mobile Developer
           </AnimatedText>
           <div className=" max-w-[42rem] text-center">
             <p className="leading-normal max-w-[80%] mx-auto text-muted-foreground text-sm sm:text-lg sm:text-base">
