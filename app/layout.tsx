@@ -100,7 +100,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <meta name="impact-site-verification" value="c4a2b104-02ce-4c87-b352-cc7b8b3d0d55" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
