@@ -101,6 +101,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+        {/* @ts-ignore */}
         <meta name="impact-site-verification" value="c4a2b104-02ce-4c87-b352-cc7b8b3d0d55" />
       </head>
       <body
