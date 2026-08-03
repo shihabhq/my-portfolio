@@ -16,7 +16,12 @@
       "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\griscreen\\\\public' -Recurse\" 2>&1)",
       "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\grinscreen'\" 2>&1)",
       "Bash(powershell.exe -Command \"Get-ChildItem 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\projects\\\\grinscreen'\" 2>&1)",
-      "Bash(powershell.exe -Command \"Remove-Item -Recurse -Force 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\grinscreen'; Write-Host 'Done'\" 2>&1)"
+      "Bash(powershell.exe -Command \"Remove-Item -Recurse -Force 'E:\\\\Code V2\\\\folio\\\\minimal-next-portfolio\\\\public\\\\grinscreen'; Write-Host 'Done'\" 2>&1)",
+      "Bash(cat /e/Code V2/folio/minimal-next-portfolio/config/*.ts)",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(node -e \":*)"
     ]
   }
 }
