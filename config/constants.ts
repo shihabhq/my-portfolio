@@ -14,6 +14,7 @@ export type ValidSkills =
   | "SEO"
   | "SASS"
   | "Google Search Console"
+  | "Google Analytics"
   | "WebSockets"
   | "Linux"
   | "React Native"
@@ -66,7 +67,10 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "Social Media Marketing"
+  | "Meta Ads"
+  | "Google Ads";
 
 export type ValidCategory =
   | "Full Stack"
