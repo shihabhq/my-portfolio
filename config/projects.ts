@@ -29,6 +29,75 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
+    id: "corpomerch",
+    companyName: "CorpoMerch - Corporate Merchandise Catalogue & Admin Platform",
+    type: "Professional",
+    category: ["Full Stack", "Frontend", "UI/UX"],
+    shortDescription:
+      "Production catalogue-and-quote platform for CorpoMerch by Backstage, a Dhaka-based corporate merchandise and print supplier, with a 20-product variant-and-tiered-pricing catalogue and a full admin backoffice, no checkout, every inquiry routes straight to WhatsApp.",
+    websiteLink: "https://corpomerch.com",
+    githubLink: "https://github.com/shihabhq/corpomerch",
+    techStack: [
+      "Next.js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "Zustand",
+    ],
+    startDate: new Date("2026-08-10"),
+    endDate: new Date("2026-08-18"),
+    companyLogoImg: "/projects/corpomerch/homepage-hero.webp",
+    pagesInfoArr: [
+      {
+        title: "Storefront & Catalogue",
+        description:
+          "Bespoke, hand-rolled storefront (no component library) with a hero, category browser, a 20-product catalogue across 11 categories, and quantity-tiered bulk pricing shown up front on every product page.",
+        imgArr: [
+          "/projects/corpomerch/homepage-hero.webp",
+          "/projects/corpomerch/homepage-product-gallery.webp",
+          "/projects/corpomerch/product-page.webp",
+        ],
+      },
+      {
+        title: "About & Contact",
+        description:
+          "About page telling the one-supplier-for-every-event story, and a contact page geared entirely toward WhatsApp-first quoting, with business hours and office location.",
+        imgArr: [
+          "/projects/corpomerch/about-page.webp",
+          "/projects/corpomerch/contact-page.webp",
+        ],
+      },
+      {
+        title: "Admin Backoffice",
+        description:
+          "Full Next.js + shadcn/ui admin panel with a dashboard, a seven-tab product/variant/pricing editor, and site settings, a separate app and repo sharing one Postgres database with the storefront via Prisma.",
+        imgArr: [
+          "/projects/corpomerch/admin-home-page.webp",
+          "/projects/corpomerch/admin-products-page.webp",
+          "/projects/corpomerch/admin-product-edit-page.webp",
+          "/projects/corpomerch/admin-site-settingspage.webp",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "CorpoMerch is the e-commerce catalogue for CorpoMerch by Backstage, a Dhaka-based supplier of customised corporate merchandise and print, ID cards, lanyards, keyrings, drinkware, bags, certificates, and large-format print like PVC banners and step-and-repeat backdrops. I designed and built it as two separate Next.js 16 apps sharing one PostgreSQL database via Prisma: a hand-rolled public storefront (corpomerch.com) and a shadcn/ui admin backoffice, deployed from two repos, client and admin.",
+        "In this website, Every product page resolves live, quantity-tiered bulk pricing through a single shared pricing engine, and every 'Send Inquiry' or 'Add to Cart' action ends in a pre-filled WhatsApp message so the business can keep running its sales process the way it always has.",
+        "The admin panel gives the CorpoMerch team a seven-tab product editor (basics, description, specs, images, variants, pricing, SEO) to manage the catalogue, with up to 3 variant axes per product, drag-and-drop image and spec ordering, a bulk tier-pricing editor, and a dashboard that surfaces data-health warnings and recent WhatsApp inquiries.",
+      ],
+      bullets: [
+        "Built two full-stack Next.js 16 apps from scratch, a public storefront and an internal admin, sharing one PostgreSQL schema.",
+        "Designed a single resolvePrice() pricing engine used everywhere (product cards, PDP, cart, WhatsApp message) to resolve quantity-tiered, per-SKU bulk pricing with zero duplicated logic.",
+        "Implemented a 3-axis product variant system with image-swapping tied to the primary axis, and an idempotent Generate SKUs flow that materialises the cartesian product of variant values.",
+        "Replaced a traditional checkout with a WhatsApp-first inquiry flow: every inquiry is logged to Postgres with a frozen price snapshot before opening a pre-filled wa.me deep link.",
+        "Built the admin's seven-tab product form, drag-and-drop image/spec reordering, bulk tier pricing, and a dashboard with data-health warnings for the CorpoMerch operations team.",
+      ],
+    },
+  },
+  {
     id: "innoverse",
     companyName: "Innoverse BD - Largest Science Carnival of Bangladesh",
     type: "Professional",
